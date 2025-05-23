@@ -18,7 +18,7 @@ import complaintRoutes from "../routes/complaintroutes.js";
 import otpRoutes from '../routes/otpRoutes.js';
 
 const app = express();
-
+const port = process.env.PORT || 4000 
 // CORS configuration
 app.use(cors({
   origin: [
@@ -67,6 +67,9 @@ app.get("/test", (req, res) => {
 app.get("/signup", (req, res) => {
     res.render("signup");
 });
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 // Export the Express API for Vercel
 export default app;
