@@ -26,5 +26,5 @@ const deviceSchema = new Schema({
     default: Date.now
   }
 });
-
-module.exports = mongoose.model('Device', deviceSchema);
+const device= mongoose.model('Device', deviceSchema);
+export default device;
